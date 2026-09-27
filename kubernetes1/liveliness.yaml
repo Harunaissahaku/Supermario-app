@@ -1,0 +1,12 @@
+########################################################
+  # this is a sample liveliness probe configuration for a Kubernetes deployment
+  # it checks the health of the application by sending an HTTP GET request to the /health endpoint
+  ########################################################
+livenessProbe:
+  httpGet:
+    path: /health
+    port: 80
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  timeoutSeconds: 5
+  
